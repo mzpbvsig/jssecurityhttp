@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "扬程加密接口测试小助手",
+  "description": "有了扬程加密接口测试小助手, 再也不用为测试加密接口操心了。 ",
+  "version": "1.0",
+  "permissions": [
+    "notifications",
+    "alarms",
+    "storage",
+    "cookies",
+    "*://*/*"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+//  "background": {
+//    "scripts": [
+//      "jquery.min.js",
+//      "base64.js",
+//      "gzip.js",
+//      "rsa.js",
+//      "encrypt.js",
+//      "util.js"
+//    ]
+//  },
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_popup": "popup.html"
+  }
+}

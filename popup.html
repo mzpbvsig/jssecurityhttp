@@ -1,0 +1,55 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="gzip.js"></script>
+    <script language="JavaScript" type="text/javascript" src="base64.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="rsa.js"></script>
+    <script language="JavaScript" type="text/javascript" src="encrypt.js"></script>
+    <script type="text/javascript" src="util.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+    <style>
+        body {  width:300px;height:580px;background-color:#fff; }
+        .input { margin-bottom : 20px; }
+        input, textarea { width:200px;}
+        .head {color: #1296db; }
+        textarea { height: 100px;}
+    </style>
+</head>
+<body>
+
+<div class="session">
+    <div class="head">设置：</div>
+    <form>
+        <div class="input">
+            <label>测试接口:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="url" class="url" value="http://api.english.com/api/news/info" /></div>
+        <div class="input">
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公钥:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <textarea class="pubkey">MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAy/M1AxLZjZOyJToExpn1hudAWySRzS+aGwNVdX9QX6vK38O7WUA7h/bYqBu+6tTRC6RnL9BksMrIf5m6D3rtfaYYmxfe/FI4ZD5ybIhFuRUi95e/J2vQVElsSNqSz7ewXquZpKZAqlzH4hGgOqmOTHlrwiQwX66bS7x7kDmvxMd5ZRGhTvz62kpKb/orcnWQ1KElNc/bIzTtv3jsrMgHFVdFZfev91ew4Kf1YJbqGBGKslBsIoGsgTxI94T6d6XEFxSzdvrRwKhOobXIaOhZo3GBCZIA/1ZOwLK6RyrWdprz+60xifcYIkILdZ7yPazSfHCVHFY6o/fQjK4dxQDWGw0fxN9QX+v3+48nW7QIBx4KNYNIW/eetGhXpOwV4PjNt15fcwJkKsx2W3VQuh93jdYB4xMyDUnRwb9np/QR1rmbzSm5ySGkmD7NAj03V+O82Nx4uxsdg2H7EQdVcY7e6dEdpLYp2p+VkDd9t/5y1D8KtC35yDwraaxXveTMfLk8SeI/Yz4QaX6dolZEuUWatLaye2uA0w25Ee35irmaNDLhDr804B7U7M4kkbwY7ijvvhnfb1NwFY5lw/2/dZqJx2gH3lXVs6AM4MTDLs4BfCXiq2WO15H8/4Gg/2iEk8QhOWZvWe/vE8/ciB2ABMEMvvSb829OOi6npw9i9pJ8CwMCAwEAAQ==</textarea>
+        </div>
+        <div class="input">
+            <label>json参数数据:</label>
+            <textarea class="msg">{"news_id": "298"}</textarea> </div>
+        <div class="input">
+            <input type="button" class="send" value="发送请求" style="width:80px;"/></div>
+    </form>
+</div>
+
+<div class="session">
+    <div class="head">返回数据：</div>
+    <textarea class="message"  style="width:280px;">
+    </textarea>
+    <input type="button" class="open" value="去解析" style="width:80px;"/></div>
+    <div class="head">详细数据：</div>
+    <div class="detail">
+
+    </div>
+</div>
+
+</body>
+
+</html>
