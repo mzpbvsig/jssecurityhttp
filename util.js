@@ -7,7 +7,6 @@ function send(url, msg, pubkey) {
     oReq.onload = function(oEvent) {
             var arrayBuffer = oReq.response;
             var result = EncryptUtils.decodeResponse(arrayBuffer);
-            $(".message").val(result);
             try{
                 jsonObj = JSON.parse(result);
             }catch(e){
