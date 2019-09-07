@@ -10,9 +10,8 @@ function send(url, msg, pubkey) {
             $(".message").val(result);
             try{
                 jsonObj = JSON.parse(result);
-                $(".detail").html("OK" + jsonObj);
             }catch(e){
-                $(".detail").html("不是一个正确的json->" + e);
+                
             }
             console.log(result);
     };
