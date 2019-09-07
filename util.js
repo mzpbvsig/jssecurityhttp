@@ -19,16 +19,3 @@ function send(url, msg, pubkey) {
     oReq.send(params);
 }
 
-
-
-function saveObject(obj, callback) {
-    chrome.storage.local.set(obj, callback);
-}
-
-function getValue(key, callback) {
-    chrome.storage.local.get(key, callback);
-}
-
-function getValueByArray(array, callback) {
-    chrome.storage.local.get(array, callback);
-}
